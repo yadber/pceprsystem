@@ -13,7 +13,24 @@ Ext.define('Packt.Application', {
     ],
 
     launch: function () {
-       
+        var me = this;
+        var task = new Ext.util.DelayedTask(function(){
+            me.splashscreen.fadeOut({
+                duration: 1000,
+                remove: true
+            });
+
+            me.splashscreen.next().fadeOut({
+                duration:1000,
+                remove: true,
+                listeners: {
+                    afteranimate: function(el, startTime, eopts){
+                        console.log('launch');
+                    }
+                }
+            });
+        });
+        task.delay(2000);
     },
     init: function(){
         var me = this;
