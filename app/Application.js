@@ -13,17 +13,17 @@ Ext.define('Packt.Application', {
     ],
 
     launch: function () {
-        // TODO - Launch the application
+       
     },
     init: function(){
         var me = this;
         me.splashscreen = Ext.getBody().mask(
-            'Please wait! Loading Application', 'splashscreen'
+            'Please wait! Loading Application...', 'splashscreen'
         );
         /** this code is  used for loading an image */
-        me.splashscreen.addCls('splashscreen');
-        Ext.DomHelper.insertFirst(Ext.query('.x-mask-msg')[0], {
-            cls : 'x-splash-icon'
-        });
+        // me.splashscreen.addCls('splashscreen');
+        // Ext.DomHelper.insertFirst(Ext.query('.x-mask-msg')[0], {
+        //     cls : 'x-splash-icon'
+        // });
     }
 });
